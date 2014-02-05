@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		 
+		<title>PuffPom</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		
+	</head>
+<body>
+		<div class="container">
+			
+			<header>
+				<h1>PuffPom <span>Drag poms to see new poms </span></h1>
+			</header>
+			<ul id="PomDrag" class="PomDrag">
+				<li></li>
+				<li></li>
+				<li></li>
+				
+			</ul>
+			
+		</div>
+		<script src="js/draggabilly.pkgd.min.js"></script>
+		<script src="js/elastiStack.js"></script>
+		<script>
+			new ElastiStack( document.getElementById( 'PomDrag' ) );
+		</script>
+	</body>
+</html>
