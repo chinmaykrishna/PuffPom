@@ -1,4 +1,7 @@
-@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700|Sacramento);
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+
+
+
 body {
 	font-family: 'Lato', Arial, sans-serif;
 	color: #fff;
@@ -10,6 +13,7 @@ body {
 .container > header {
 	padding: 1em;
 	background-color:black;
+line-height : 80%;
 }
 
 .container > header h1 {
@@ -22,3 +26,70 @@ body {
 	font-size: 70%;
 	font-weight: 300;
 }
+
+.PomDrag {
+	position: relative;
+	margin: 50px auto;
+	padding: 0;
+	width: 340px;
+	height: 380px;
+	list-style: none;
+	color :black;
+}
+
+.no-js .PomDrag {
+	max-width: 1090px;
+	width: 100%;
+	height: auto;
+	text-align: center;
+}
+
+.PomDrag li {
+	position: absolute;
+	z-index: 1;
+	width: 340px;
+	height: 380px;
+	box-shadow: 0 10px 7px -7px rgba(0,0,0,0.12), 0 0 4px rgba(0,0,0,0.1);
+	opacity: 0;
+	cursor: pointer;
+	overflow :hidden;
+	-webkit-transform: translate3d(0,0,-180px);
+	transform: translate3d(0,0,-180px);
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+
+.no-js .PomDrag li {
+	position: relative;
+	display: inline-block;
+	opacity: 1;
+	margin: 10px;
+	cursor: default;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+.PomDrag li img {
+	width : 340px;
+	height : 380px;
+}
+
+.PomDrag li h5 {
+	position: absolute; 
+   	bottom: 0; 
+   	left: 0; 
+   	max-width: 100%; 
+	max-height : 100%;
+	color: white; 
+   font:  24px/45px Helvetica, Sans-Serif; 
+   letter-spacing: -1px;  
+   background: rgba(0, 0, 0, 0.7);
+   padding: 10px; 
+}
+
+.PomDrag li.animate {
+	-webkit-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+}
+
+
